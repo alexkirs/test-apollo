@@ -7,7 +7,7 @@
     <div>
         <h2>Test video api call</h2>
         <div v-for="item in video" :key="item.id">
-          {{ item.id }} - {{ item.desc }}
+          {{ item.id }} - {{ item.desc }} / {{ item.author.id }} - {{ item.author.uniqueId }}
         </div>
     </div>
     <hr/>
@@ -34,6 +34,10 @@ export default {
         id,
         tiktok_id,
         desc
+        author {
+          id
+          uniqueId
+        }
       }
     }`,
   },
